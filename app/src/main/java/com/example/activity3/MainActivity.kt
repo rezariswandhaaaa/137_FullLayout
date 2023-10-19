@@ -37,6 +37,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.activity3.ui.theme.Activity3Theme
+import com.example.activity3.ui.theme.Blue01
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -93,7 +94,7 @@ fun Atribut(){
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .clip(RoundedCornerShape(10.dp))
-            .background(Color.LightGray)
+            .background(Blue01)
             .fillMaxWidth()
     ){
 
@@ -230,7 +231,7 @@ fun BoxScreen(){
     Box(
         Modifier
             .clip(RoundedCornerShape(10.dp))
-            .background(Color.LightGray)
+            .background(Blue01)
             .fillMaxWidth()
     ){
     Column (
