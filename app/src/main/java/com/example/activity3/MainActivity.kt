@@ -28,6 +28,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.modifier.modifierLocalConsumer
+import androidx.compose.ui.platform.InspectableModifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -81,18 +82,107 @@ fun HomeScreen(){
 
         Spacer(modifier = Modifier.padding(13.dp))
 
+        Atribut()
+
     }
 }
 
 @Composable
 fun Atribut(){
-    Column {
-        Row {
+    Column (
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier
+            .clip(RoundedCornerShape(10.dp))
+            .background(Color.LightGray)
+            .fillMaxWidth()
+    ){
+
+        Spacer(modifier = Modifier.padding(10.dp))
+
+        Row (
+            horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier
+                .fillMaxWidth()
+        ){
+                Text(
+                    text = "Humidity",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Normal,
+                    modifier = Modifier.padding(start = 30.dp)
+                )
+                Text(
+                    text = "UV Index",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Normal,
+                    modifier = Modifier.padding(end = 25.dp)
+                )
+            }
+        Row (
+            horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier
+                .fillMaxWidth()
+        ){
+                Text(
+                    text = "98%",
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(start = 50.dp)
+                )
+                Text(
+                    text = "9/10",
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(end = 40.dp)
+                )
+            }
+
+
+        Spacer(modifier = Modifier.padding(13.dp))
+
+
+        Row (
+            horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier
+                .fillMaxWidth()
+        ){
+                Text(
+                    text = "Sunrise",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Normal,
+                    modifier = Modifier.padding(start = 35.dp)
+                )
+                Text(
+                    text = "Sunset",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Normal,
+                    modifier = Modifier.padding(end = 35.dp)
+                )
+            }
+        Row (
+            horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier
+                .fillMaxWidth()
+        ){
+                Text(
+                    text = "05.00 AM",
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(start = 15.dp)
+                )
+                Text(
+                    text = "05.40 AM",
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(end = 15.dp)
+                )
+            }
+
+        Spacer(modifier = Modifier.padding(20.dp))
 
         }
-    }
 
 }
+
 
 
 @Composable
